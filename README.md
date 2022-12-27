@@ -1,0 +1,1 @@
+# actionlint-on-gha-sample
