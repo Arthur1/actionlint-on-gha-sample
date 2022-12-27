@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - main
+
+name: invalid ci
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: poyo
+        name: set output
+        run: echo "::set-output name=greet::hello_world"
+      - name: echo output
+        run: echo "${{ steps.poyo.outputs.greet }}"
